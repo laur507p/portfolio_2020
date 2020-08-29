@@ -8,7 +8,9 @@
 
 html {
     scroll-behavior: smooth;
+
 }
+
 
 
 body {
@@ -20,6 +22,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: 5vw 12vw 5vw 12vw;
+}
+
+.sectionwrapper2 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
 }
 
 .sectionwrapper_myndir {
@@ -139,6 +149,18 @@ footer {
     pointer-events: none;
 }
 
+#nafnahringur_container_om {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    /*    z-index: -10;*/
+    opacity: 1;
+}
+
 /*
 #coverphoto {
     width: 100vw;
@@ -196,10 +218,6 @@ footer {
     font-family: helvetica;
     font-weight: 200;
     display: block;
-}
-
-#nav a:active {
-    text-decoration: underline;
 }
 
 #nav a:hover {
@@ -404,8 +422,19 @@ h2 {
 }
 
 
-#ommig .text {
-    margin-top: 50px;
+#ommig .text {}
+
+.image {
+    margin-top: 10vh;
+}
+
+#ommig ul {
+    color: white;
+    font-family: helvetica;
+    font-weight: 200;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
 }
 
 /*
