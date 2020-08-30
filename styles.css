@@ -161,6 +161,57 @@ footer {
     opacity: 1;
 }
 
+.scroll-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    left: 48vw;
+    top: 0;
+}
+
+.scroll-container .scroll {
+    width: 100%;
+    display: flex;
+    transform: rotate(90deg);
+}
+
+.scroll-container .scroll div {
+    color: white;
+    font-family: helvetica;
+    font-weight: 200;
+    font-size: 4rem;
+    white-space: nowrap;
+    animation: animate 40s linear infinite;
+    animation-delay: -40s;
+}
+
+.scroll-container .scroll div:nth-child(2) {
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%)
+    }
+}
+
 /*
 #coverphoto {
     width: 100vw;
