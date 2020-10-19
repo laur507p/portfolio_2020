@@ -8,6 +8,14 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
 body {
   margin: 0;
   background-color: black;
@@ -76,25 +84,6 @@ h1 {
   font-size: 2rem;
 }
 
-.title {
-  text-align: right;
-  position: fixed;
-  top: 5px;
-  right: 5px;
-  margin: 0;
-  font-size: 3rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
-
-img {
-  width: 100%;
-}
-
-video {
-  width: 100%;
-}
-
 footer {
   text-align: left;
   font-family: helvetica;
@@ -124,48 +113,10 @@ footer {
 }
 
 /*--------------------- FORSIDE ------------------------*/
-#nafnahringur {
-  background-image: url(svg/nafnahringur.svg);
-  height: 150vw;
-  width: 150vw;
-  background-size: cover;
-  position: absolute;
-  top: 30vw;
-  left: -100vw;
-  filter: invert(100%);
-  pointer-events: none;
-}
 
-#nafnahringur2 {
-  background-image: url(svg/nafnahringur.svg);
-  height: 140vw;
-  width: 140vw;
-  background-size: cover;
-  position: absolute;
-  top: -95vw;
-  right: -90vw;
-  filter: invert(100%);
-  pointer-events: none;
-}
-
-#nafnahringur_container {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-  pointer-events: none;
-}
-
-#nafnahringur_container_om {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  /*    z-index: -10;*/
-  opacity: 1;
+/*---------- Sidebar text ----------*/
+#side-text {
+  display: none;
 }
 
 .scroll-container {
@@ -218,18 +169,6 @@ footer {
     transform: translateX(-200%);
   }
 }
-
-/*
-#coverphoto {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background-image: url(myndir/backgroundphot.jpg);
-    background-size: cover;
-    z-index: -10000;
-
-}
-*/
 
 #coverphoto {
   width: 30vw;
@@ -304,61 +243,7 @@ nav a:visited {
   text-decoration: underline;
 }
 
-/*------------------ BACKGROUND TEXT ----------------------*/
-
-#text_bottom {
-  background-image: url(svg/texti_top2.svg);
-  bottom: -2vw;
-  left: 0;
-  background-size: cover;
-  position: fixed;
-  width: 100vw;
-  height: 4.94vw;
-  z-index: -1000;
-  filter: invert(100%);
-}
-
-#text_top {
-  background-image: url(svg/texti_top2.svg);
-  top: -1vw;
-  left: 0;
-  width: 100vw;
-  height: 4.94vw;
-  background-size: cover;
-  position: fixed;
-  z-index: -1000;
-  filter: invert(100%);
-}
-
-#text_left {
-  background-image: url(svg/texi_left_lengri.svg);
-  left: -1vw;
-  top: 0;
-  height: 224.5454545454546vw;
-  width: 4.94vw;
-  background-size: cover;
-  position: fixed;
-  z-index: -1000;
-  filter: invert(100%);
-}
-
-#text_right {
-  background-image: url(svg/texti_right_lengri.svg);
-  right: -1vw;
-  top: 0;
-  height: 224.5454545454546vw;
-  width: 4.94vw;
-  background-size: cover;
-  position: fixed;
-  z-index: -1000;
-  filter: invert(100%);
-}
-
-#bakgrunnstexti {
-  display: none;
-}
-
-/*---------------------- PORFTOLIO ------------------------*/
+/*---------------------- WORK ------------------------*/
 
 .knap a {
   text-align: center;
@@ -448,54 +333,9 @@ h2 {
   text-decoration: underline;
 }
 
-/*-------------------------- OM MIG -----------------------------*/
+/*-------------------------- ABOUT -----------------------------*/
 
-#ommig h1 {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-weight: 100;
-  /*    font-family: big-caslon-fb,
- serif;*/
-}
-
-#ommig p {
-  font-size: 1.1rem;
-  line-height: 21px;
-}
-
-#ommig .text {
-}
-
-.image {
-  margin-top: 10vh;
-}
-
-#ommig ul {
-  color: white;
-  font-family: helvetica;
-  font-weight: 200;
-  text-decoration: none;
-  list-style-type: none;
-  padding: 0;
-}
-
-/*
-#ommig .text {
-    flex-basis: 250px;
-    flex-grow: 1;
-}
-
-#ommig .image {
-    flex-basis: 350px;
-    flex-grow: 2;
-}
-*/
-
-#ommig .sectionwrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5vw 10vw 5vw 14vw;
-}
+/*-------------------------- CONTACT -----------------------------*/
 
 /*-----------------------  ANIMATIONER -------------------*/
 
@@ -517,6 +357,9 @@ h2 {
 }
 
 /*------------------------ MEDIA QUERY ----------------------------*/
+@media only screen and (min-width: 300px) {
+  /*------------ Muna að gera grid fyrir 300px síma -----------------------*/
+}
 
 @media only screen and (min-width: 600px) {
   .knapper {
@@ -539,54 +382,7 @@ h2 {
     display: inline;
   }
 
-  .title {
-    writing-mode: horizontal-tb;
-  }
-
   /*--------------------- FORSIDE ------------------------*/
-  #nafnahringur {
-    background-image: url(svg/nafnahringur.svg);
-    height: 150vw;
-    width: 150vw;
-    background-size: cover;
-    position: absolute;
-    top: 15vw;
-    left: -80vw;
-    filter: invert(100%);
-    pointer-events: none;
-  }
-
-  #nafnahringur2 {
-    background-image: url(svg/nafnahringur.svg);
-    height: 140vw;
-    width: 140vw;
-    background-size: cover;
-    position: absolute;
-    top: -95vw;
-    right: -80vw;
-    filter: invert(100%);
-    pointer-events: none;
-  }
-
-  #nafnahringur_container {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-    pointer-events: none;
-  }
-
-  /*
-#coverphoto {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background-image: url(myndir/backgroundphot.jpg);
-    background-size: cover;
-    z-index: -10000;
-
-}
-*/
 
   #coverphoto {
     width: 20vw;
@@ -610,5 +406,11 @@ h2 {
     position: absolute;
     top: 10vh;
     left: 42vw;
+  }
+
+  @media only screen and (min-width: 800px) {
+    #side-text {
+      display: block;
+    }
   }
 }
