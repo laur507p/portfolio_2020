@@ -114,6 +114,20 @@ footer {
 
 /*--------------------- FORSIDE ------------------------*/
 
+.ztext-test {
+  font-size: 5rem;
+  margin-top: 20vw;
+  transition: transform 1s;
+  text-align: center;
+  font-family: halyard-display, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.text-test {
+  text-align: center;
+}
+
 /*---------- Sidebar text ----------*/
 #side-text {
   display: none;
@@ -198,10 +212,7 @@ footer {
 
 #nav {
   text-align: left;
-  margin: 0px 0 0 0;
-  position: fixed;
-  top: 5px;
-  left: 10px;
+  margin: 5px 10px;
 }
 
 #nav a {
@@ -211,10 +222,16 @@ footer {
   text-decoration: none;
   font-family: helvetica;
   font-weight: 200;
-  display: block;
 }
 
-#nav a:hover {
+#nav li,
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav li:hover {
   text-decoration: underline;
 }
 
@@ -222,7 +239,7 @@ nav a:visited {
   color: white;
 }
 
-#nav2 {
+/* #nav2 {
   text-align: center;
 }
 
@@ -241,7 +258,7 @@ nav a:visited {
 
 #nav2 a:hover {
   text-decoration: underline;
-}
+} */
 
 /*---------------------- WORK ------------------------*/
 
@@ -337,6 +354,21 @@ h2 {
 
 /*-------------------------- CONTACT -----------------------------*/
 
+#contact p {
+  font-family: halyard-display, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 5rem;
+  text-align: left;
+  text-decoration: underline;
+}
+
+#contact {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
 /*-----------------------  ANIMATIONER -------------------*/
 
 .rotate {
@@ -412,5 +444,9 @@ h2 {
     #side-text {
       display: block;
     }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    /*------------ Breyta max width fyrir stóra skjái -----------------------*/
   }
 }
