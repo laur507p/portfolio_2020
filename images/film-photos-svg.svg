@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1604 3024">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1500 1089">
+      <image width="1500" height="1089" href="film_photos/analog_2.png" />
+    </pattern>
+    <pattern id="pattern-2" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1500 1090">
+      <image width="1500" height="1090" href="film_photos/analog_3.png" />
+    </pattern>
+    <pattern id="pattern-3" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1500 1090">
+      <image width="1500" height="1090" href="film_photos/analog_5.png" />
+    </pattern>
+    <pattern id="pattern-4" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1001 1500">
+      <image width="1001" height="1500" href="film_photos/analog_1.png" />
+    </pattern>
+    <pattern id="pattern-5" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1001 1500">
+      <image width="1001" height="1500" href="film_photos/analog_6.png" />
+    </pattern>
+    <pattern id="pattern-6" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1001 1500">
+      <image width="1001" height="1500" href="film_photos/analog_7.png" />
+    </pattern>
+    <pattern id="pattern-7" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1500 1093">
+      <image height="1093" width="1500" href="film_photos/analog_4.png" />
+    </pattern>
+    <clipPath id="clip-film-photos">
+      <rect width="1604" height="3024" />
+    </clipPath>
+  </defs>
+  <g id="film-photos" clip-path="url(#clip-film-photos)">
+    <rect id="analog_2" width="804" height="584" transform="translate(99 1240)" fill="url(#pattern)" />
+    <rect id="analog_3" width="1290" height="936" transform="translate(205 573)" fill="url(#pattern-2)" />
+    <rect id="analog_5" width="804" height="584" transform="translate(750 164)" fill="url(#pattern-3)" />
+    <rect id="analog_1" width="661" height="990" transform="translate(903 1297)" fill="url(#pattern-4)" />
+    <rect id="analog_6" width="661" height="990" transform="translate(22 1852)" fill="url(#pattern-5)" />
+    <rect id="analog_7" width="660" height="990" transform="translate(502 2001)" fill="url(#pattern-6)" />
+    <rect id="analog_4" width="804" height="584" transform="translate(99)" fill="url(#pattern-7)" />
+  </g>
+</svg>

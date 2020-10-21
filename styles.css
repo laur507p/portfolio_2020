@@ -67,6 +67,14 @@ h1 {
   padding: 20px;
 }
 
+.hide-mobile {
+  display: none;
+}
+
+.hide-desktop {
+  display: block;
+}
+
 /*--------------------- FORSIDE ------------------------*/
 
 .ztext-test {
@@ -172,48 +180,30 @@ h1 {
   width: 100vw;
   background-color: black;
   z-index: 1000;
+  top: 0;
+  left: 0;
   transition: 0.4s;
+  margin: 0;
   padding-top: 20vh;
 }
 
-/* .burger-icon {
-  display: block;
-  color: white;
-  font-size: 2rem;
-  position: fixed;
-  right: 30px;
-  top: 30px;
-  margin: 0;
-  z-index: 1001;
-  font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-} */
-
 #nav a {
   color: white;
-  font-size: 6rem;
-  margin-right: 10px;
+  font-size: 4rem;
+  margin: 0;
   text-decoration: none;
   font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
+  line-height: 80px;
 }
 
 #nav li,
 #nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 5px 0;
+  padding: 0;
   text-align: center;
-}
-
-/* #nav .active {
-  font-style: italic;
-} */
-
-#nav a:hover {
-  text-decoration: underline;
 }
 
 nav a:visited {
@@ -226,10 +216,50 @@ nav a:visited {
   pointer-events: none;
 }
 
-.hide-mobile {
-  display: none;
+.link {
+  position: relative;
 }
-/*----------- burger menu ----*/
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  margin-top: -10px;
+  display: block;
+  right: 0;
+  background: #fff;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+.header-title {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+}
+
+.header-title a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 18px;
+}
+
+header {
+  padding: 20px;
+}
+
+/*----------- burger menu animation ----*/
 
 #burger-icon {
   width: 30px;
@@ -237,7 +267,6 @@ nav a:visited {
   height: 20px;
   position: relative;
   float: right;
-  margin: 20px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -251,8 +280,8 @@ nav a:visited {
 #burger-icon span {
   display: block;
   position: absolute;
-  height: 1.2px;
-  border-radius: 0.5px;
+  height: 1.4px;
+  border-radius: 0.8px;
   width: 100%;
   background: white;
   opacity: 1;
@@ -316,24 +345,6 @@ nav a:visited {
 
 /*---------------------- WORK ------------------------*/
 
-#tiltopknap {
-  position: fixed;
-  bottom: 0;
-  right: 1vw;
-}
-
-#tiltopknap a {
-  font-family: helvetica;
-  color: white;
-  text-decoration: none;
-  font-size: 3rem;
-  font-weight: 200;
-}
-
-#tiltopknap a:hover {
-  text-decoration: underline;
-}
-
 .film-photos {
   display: flex;
   flex-wrap: wrap;
@@ -389,12 +400,11 @@ footer {
   font-style: normal;
   letter-spacing: 1px;
   color: white;
+  font-size: 0.9rem;
   font-weight: 100;
   position: absolute;
-  bottom: 0;
-  left: 5px;
-  width: 100%;
-  height: 2.5rem;
+  bottom: 10px;
+  left: 30px;
 }
 
 /*-----------------------  ANIMATIONER -------------------*/
@@ -413,6 +423,33 @@ footer {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+.float {
+  animation-name: float_kf;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform: translate(99px, 1240px);
+}
+
+@keyframes float_kf {
+  0% {
+    transform: translate(18px, 17px);
+  }
+  25% {
+    transform: translate(18px, 38px);
+  }
+  50% {
+    transform: translate(-17px, 36px);
+  }
+  75% {
+    transform: translate(-19px, 18px);
+  }
+  100% {
+    transform: translate(18px, 17px);
   }
 }
 
@@ -475,8 +512,9 @@ footer {
     }
 
     #nav a {
-      font-size: 3.5rem;
-      line-height: 68px;
+      font-size: 3rem;
+      line-height: 58px;
+      font-weight: 400;
     }
 
     .hide-burger {
@@ -487,6 +525,13 @@ footer {
 
     .hide-mobile {
       display: block;
+    }
+    .hide-desktop {
+      display: none;
+    }
+
+    header {
+      padding: 0px;
     }
   }
 
