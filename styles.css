@@ -1,622 +1,420 @@
 /*------------ GENERALLE INDSTILLINGER------------------*/
 
 * {
-    box-sizing: border-box;
-
+  box-sizing: border-box;
 }
 
-
 html {
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
 
 img {
-    width: 100%;
+  width: 100%;
+}
+
+video {
+  width: 100%;
 }
 
 body {
-    margin: 0;
-    background-color: black;
+  margin: 0;
+  background-color: black;
+}
+
+.button {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50vw;
+  padding: 10px 40px 10px 40px;
+  font-family: helvetica;
+  text-decoration: none;
+  font-size: 3rem;
+  transition: 0.3s;
+  font-weight: 200;
+}
+
+.button:hover {
+  color: black;
+  border: 1px solid white;
+  background-color: white;
+  transition: 0.3s;
 }
 
 .sectionwrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5vw 12vw 5vw 12vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5vw 12vw 5vw 12vw;
 }
 
 .sectionwrapper2 {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-left: 10vw;
-    padding-right: 10vw;
-
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 .sectionwrapper_myndir {
-    display: grid;
-    margin: 5vw 13vw 5vw 13vw;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    z-index: 10000;
-    grid-gap: 50px;
+  display: grid;
+  margin: 5vw 13vw 5vw 13vw;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  z-index: 10000;
+  grid-gap: 50px;
 }
 
 .text {
-    flex-basis: 300px;
-    flex-grow: 1;
-    padding: 15px;
+  flex-basis: 300px;
+  flex-grow: 1;
+  padding: 15px;
 }
 
 .image {
-    flex-basis: 300px;
-    flex-grow: 1;
-    padding: 10px;
+  flex-basis: 300px;
+  flex-grow: 1;
+  padding: 10px;
 }
 
 .image2 {
-    z-index: 100000;
-
+  z-index: 100000;
 }
 
 h1 {
-    font-family: helvetica;
-    color: white;
-    font-weight: 200;
-    font-size: 2rem;
+  font-family: helvetica;
+  color: white;
+  font-weight: 200;
+  font-size: 2rem;
 }
-
-.title {
-    text-align: right;
-    position: fixed;
-    top: 5px;
-    right: 5px;
-    margin: 0;
-    font-size: 3rem;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-}
-
-
-
-video {
-    width: 100%;
-}
-
-
-
 
 footer {
-    text-align: left;
-    font-family: helvetica;
-    color: white;
-    font-weight: 100;
-    padding-left: 20px;
+  text-align: left;
+  font-family: helvetica;
+  color: white;
+  font-weight: 100;
+  padding-left: 20px;
 }
 
 .reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .wrapreverse {
-    flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
 }
 
 .spacer {
-    height: 200px;
+  height: 200px;
 }
 
 #topspacer {
-    height: 150px;
+  height: 150px;
 }
 
 .spacer_ommig {
-    height: 100px;
+  height: 100px;
 }
 
 /*--------------------- FORSIDE ------------------------*/
-#nafnahringur {
-    background-image: url(svg/nafnahringur.svg);
-    height: 150vw;
-    width: 150vw;
-    background-size: cover;
-    position: absolute;
-    top: 30vw;
-    left: -100vw;
-    filter: invert(100%);
-    pointer-events: none;
-}
 
-#nafnahringur2 {
-    background-image: url(svg/nafnahringur.svg);
-    height: 140vw;
-    width: 140vw;
-    background-size: cover;
-    position: absolute;
-    top: -95vw;
-    right: -90vw;
-    filter: invert(100%);
-    pointer-events: none;
-}
-
-
-
-#nafnahringur_container {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-    pointer-events: none;
-}
-
-#nafnahringur_container_om {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    /*    z-index: -10;*/
-    opacity: 1;
+/*---------- Sidebar text ----------*/
+#side-text {
+  display: none;
 }
 
 .scroll-container {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    pointer-events: none;
-    left: 48vw;
-    top: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  left: 48vw;
+  top: 0;
 }
 
 .scroll-container .scroll {
-    width: 100%;
-    display: flex;
-    transform: rotate(90deg);
+  width: 100%;
+  display: flex;
+  transform: rotate(90deg);
 }
 
 .scroll-container .scroll div {
-    color: white;
-    font-family: helvetica;
-    font-weight: 200;
-    font-size: 4rem;
-    white-space: nowrap;
-    animation: animate 40s linear infinite;
-    animation-delay: -40s;
+  color: white;
+  font-family: helvetica;
+  font-weight: 200;
+  font-size: 4rem;
+  white-space: nowrap;
+  animation: animate 40s linear infinite;
+  animation-delay: -40s;
 }
 
 .scroll-container .scroll div:nth-child(2) {
-    animation: animate2 40s linear infinite;
-    animation-delay: -20s;
+  animation: animate2 40s linear infinite;
+  animation-delay: -20s;
 }
 
 @keyframes animate {
-    0% {
-        transform: translateX(100%);
-    }
+  0% {
+    transform: translateX(100%);
+  }
 
-    100% {
-        transform: translateX(-100%)
-    }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes animate2 {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        transform: translateX(-200%)
-    }
+  100% {
+    transform: translateX(-200%);
+  }
 }
 
-
 #coverphoto {
-    width: 30vw;
-    margin: auto;
-    position: absolute;
-    top: 55vh;
-    left: 55vw;
+  width: 30vw;
+  margin: auto;
+  position: absolute;
+  top: 55vh;
+  left: 55vw;
 }
 
 #coverphoto2 {
-    width: 40vw;
-    margin: auto;
-    position: absolute;
-    top: 50vh;
-    left: 10vw;
+  width: 40vw;
+  margin: auto;
+  position: absolute;
+  top: 50vh;
+  left: 10vw;
 }
 
 #coverphoto3 {
-    width: 45vw;
-    margin: auto;
-    position: absolute;
-    top: 30vh;
-    left: 25vw;
+  width: 45vw;
+  margin: auto;
+  position: absolute;
+  top: 30vh;
+  left: 25vw;
 }
 
 /*----------------- NAV og HEADER ------------------------------*/
 
 #nav {
-    text-align: left;
-    margin: 0px 0 0 0;
-    position: fixed;
-    top: 5px;
-    left: 10px;
-
-
+  text-align: left;
+  margin: 0px 0 0 0;
+  position: fixed;
+  top: 5px;
+  left: 10px;
 }
 
 #nav a {
-    color: white;
-    font-size: 3rem;
-    margin-right: 10px;
-    text-decoration: none;
-    font-family: helvetica;
-    font-weight: 200;
-    display: block;
+  color: white;
+  font-size: 3rem;
+  margin-right: 10px;
+  text-decoration: none;
+  font-family: helvetica;
+  font-weight: 200;
+  display: block;
 }
 
 #nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-
 nav a:visited {
-    color: white;
+  color: white;
 }
 
 #nav2 {
-    text-align: center;
-
+  text-align: center;
 }
 
 #nav .active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #nav2 a {
-    color: white;
-    font-size: 2rem;
-    margin-right: 10px;
-    text-decoration: none;
-    font-family: helvetica;
-    font-weight: 200;
-    text-transform: uppercase;
-    padding: 0 10px 0 10px;
-    display: block;
-    opacity: 0.8;
-
+  color: white;
+  font-size: 2rem;
+  margin-right: 10px;
+  text-decoration: none;
+  font-family: helvetica;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding: 0 10px 0 10px;
+  display: block;
+  opacity: 0.8;
 }
 
 #nav2 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-
-/*------------------ BACKGROUND TEXT ----------------------*/
-
-#text_bottom {
-    background-image: url(svg/texti_top2.svg);
-    bottom: -2vw;
-    left: 0;
-    background-size: cover;
-    position: fixed;
-    width: 100vw;
-    height: 4.94vw;
-    z-index: -1000;
-    filter: invert(100%);
-}
-
-#text_top {
-    background-image: url(svg/texti_top2.svg);
-    top: -1vw;
-    left: 0;
-    width: 100vw;
-    height: 4.94vw;
-    background-size: cover;
-    position: fixed;
-    z-index: -1000;
-    filter: invert(100%);
-}
-
-#text_left {
-    background-image: url(svg/texi_left_lengri.svg);
-    left: -1vw;
-    top: 0;
-    height: 224.5454545454546vw;
-    width: 4.94vw;
-    background-size: cover;
-    position: fixed;
-    z-index: -1000;
-    filter: invert(100%);
-}
-
-#text_right {
-    background-image: url(svg/texti_right_lengri.svg);
-    right: -1vw;
-    top: 0;
-    height: 224.5454545454546vw;
-    width: 4.94vw;
-    background-size: cover;
-    position: fixed;
-    z-index: -1000;
-    filter: invert(100%);
-}
-
-#bakgrunnstexti {
-    display: none;
-}
-
-/*---------------------- PORFTOLIO ------------------------*/
+/*---------------------- WORK ------------------------*/
 
 .knap a {
-    text-align: center;
-    background-color: white;
-    padding: 10px 15px 10px 15px;
-    text-decoration: none;
-    color: black;
-    font-family: helvetica;
-    font-weight: 400;
-    text-transform: uppercase;
-    border: 1px solid white;
-    transition: 0.5s;
-
+  text-align: center;
+  background-color: white;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-family: helvetica;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid white;
+  transition: 0.5s;
 }
 
 .knap a:visited {
-    color: black;
+  color: black;
 }
 
 .knap a:hover {
-    /*    text-decoration: underline;*/
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    transition: 0.5s;
+  /*    text-decoration: underline;*/
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  transition: 0.5s;
 }
 
 .knap {
-    margin: 20px 10px 30px 0px;
+  margin: 20px 10px 30px 0px;
 }
 
 .text p {
-    color: white;
-    font-family: helvetica;
-    font-weight: 200;
-    padding: 0 0 10px 0;
-    line-height: 19px;
+  color: white;
+  font-family: helvetica;
+  font-weight: 200;
+  padding: 0 0 10px 0;
+  line-height: 19px;
 }
 
 h2 {
-    color: white;
-    font-family: helvetica;
-    font-weight: 100;
+  color: white;
+  font-family: helvetica;
+  font-weight: 100;
 }
 
-
-
 .imageflex img {
-
-    padding: 0 15px 0 15px;
-
+  padding: 0 15px 0 15px;
 }
 
 .sectionheader {
-    margin-left: 12vw;
-    padding: 50px 10px 10px 10px;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    margin-right: 12vw;
-
+  margin-left: 12vw;
+  padding: 50px 10px 10px 10px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-right: 12vw;
 }
 
 .munatitle {
-    margin-left: 12vw;
-    padding: 50px 10px 10px 10px;
-    font-size: 1.5rem;
-    margin-right: 12vw;
-
+  margin-left: 12vw;
+  padding: 50px 10px 10px 10px;
+  font-size: 1.5rem;
+  margin-right: 12vw;
 }
 
 #inhold section {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .image {
-    z-index: 10000;
+  z-index: 10000;
 }
 
 #tiltopknap {
-    position: fixed;
-    bottom: 0;
-    right: 1vw;
+  position: fixed;
+  bottom: 0;
+  right: 1vw;
 }
 
 #tiltopknap a {
-    font-family: helvetica;
-    color: white;
-    text-decoration: none;
-    font-size: 3rem;
-    font-weight: 200;
+  font-family: helvetica;
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 200;
 }
 
 #tiltopknap a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+/*-------------------------- ABOUT -----------------------------*/
 
-
-/*-------------------------- OM MIG -----------------------------*/
-
-#ommig h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-weight: 100;
-    /*    font-family: big-caslon-fb,
- serif;*/
-}
-
-#ommig p {
-    font-size: 1.1rem;
-    line-height: 21px;
-}
-
-
-#ommig .text {}
-
-.image {
-    margin-top: 10vh;
-}
-
-#ommig ul {
-    color: white;
-    font-family: helvetica;
-    font-weight: 200;
-    text-decoration: none;
-    list-style-type: none;
-    padding: 0;
-}
-
-/*
-#ommig .text {
-    flex-basis: 250px;
-    flex-grow: 1;
-}
-
-#ommig .image {
-    flex-basis: 350px;
-    flex-grow: 2;
-}
-*/
-
-#ommig .sectionwrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5vw 10vw 5vw 14vw;
-}
-
-
+/*-------------------------- CONTACT -----------------------------*/
 
 /*-----------------------  ANIMATIONER -------------------*/
 
 .rotate {
-    animation-name: rotate_kf;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  animation-name: rotate_kf;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes rotate_kf {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*------------------------ MEDIA QUERY ----------------------------*/
+@media only screen and (min-width: 300px) {
+  /*------------ Muna að gera grid fyrir 300px síma -----------------------*/
+}
 
 @media only screen and (min-width: 600px) {
-    .knapper {
-        display: flex;
-    }
+  .knapper {
+    display: flex;
+  }
 
-    .sectionheader {
-        margin-left: 12vw;
-        padding: 50px 10px 10px 10px;
-        font-size: 2.8rem;
-        text-transform: uppercase;
-        margin-right: 12vw;
+  .sectionheader {
+    margin-left: 12vw;
+    padding: 50px 10px 10px 10px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    margin-right: 12vw;
+  }
 
-    }
+  #inhold section {
+    margin-bottom: 50px;
+  }
 
-    #inhold section {
-        margin-bottom: 50px;
-    }
+  #nav2 a {
+    display: inline;
+  }
 
-    #nav2 a {
-        display: inline;
-    }
+  /*--------------------- FORSIDE ------------------------*/
 
-    .title {
-        writing-mode: horizontal-tb;
-
-    }
-
-    /*--------------------- FORSIDE ------------------------*/
-    #nafnahringur {
-        background-image: url(svg/nafnahringur.svg);
-        height: 150vw;
-        width: 150vw;
-        background-size: cover;
-        position: absolute;
-        top: 15vw;
-        left: -80vw;
-        filter: invert(100%);
-        pointer-events: none;
-    }
-
-    #nafnahringur2 {
-        background-image: url(svg/nafnahringur.svg);
-        height: 140vw;
-        width: 140vw;
-        background-size: cover;
-        position: absolute;
-        top: -95vw;
-        right: -80vw;
-        filter: invert(100%);
-        pointer-events: none;
-    }
-
-
-
-    #nafnahringur_container {
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-        position: relative;
-        pointer-events: none;
-    }
-
-    /*
-#coverphoto {
-    width: 100vw;
-    height: 100vh;
+  #coverphoto {
+    width: 20vw;
+    margin: auto;
     position: absolute;
-    background-image: url(myndir/backgroundphot.jpg);
-    background-size: cover;
-    z-index: -10000;
+    top: 55vh;
+    left: 47vw;
+  }
 
-}
-*/
+  #coverphoto2 {
+    width: 20vw;
+    margin: auto;
+    position: absolute;
+    top: 37vh;
+    left: 20vw;
+  }
 
+  #coverphoto3 {
+    width: 30vw;
+    margin: auto;
+    position: absolute;
+    top: 10vh;
+    left: 42vw;
+  }
 
-    #coverphoto {
-        width: 20vw;
-        margin: auto;
-        position: absolute;
-        top: 55vh;
-        left: 47vw;
+  @media only screen and (min-width: 800px) {
+    #side-text {
+      display: block;
     }
-
-    #coverphoto2 {
-        width: 20vw;
-        margin: auto;
-        position: absolute;
-        top: 37vh;
-        left: 20vw;
-    }
-
-    #coverphoto3 {
-        width: 30vw;
-        margin: auto;
-        position: absolute;
-        top: 10vh;
-        left: 42vw;
-    }
+  }
 }
