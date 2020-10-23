@@ -19,8 +19,6 @@ video {
 body {
   margin: 0;
   background-color: black;
-  position: relative;
-  min-height: 100vh;
 }
 
 .button {
@@ -42,15 +40,12 @@ body {
   transition: 0.3s;
 }
 
-h1 {
-  font-family: helvetica;
-  color: white;
-  font-weight: 200;
-  font-size: 2rem;
-}
-
 .reverse {
   flex-direction: row-reverse;
+}
+
+a:visited {
+  color: white;
 }
 
 .hide {
@@ -64,7 +59,7 @@ h1 {
 .section-wrapper {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 30px;
 }
 
 .hide-mobile {
@@ -76,7 +71,7 @@ h1 {
 }
 
 .spacer {
-  height: 120px;
+  height: 80px;
 }
 
 /*--------------------- FORSIDE ------------------------*/
@@ -96,18 +91,36 @@ h1 {
 }
 
 /*---------- Sidebar text ----------*/
-#side-text {
+/* #side-text {
   display: none;
-}
+} */
 
 .scroll-container {
   position: fixed;
-  width: 100vw;
+  width: 100vh;
   height: 100vh;
   overflow: visible;
   pointer-events: none;
-  right: 30px;
+  right: 0px;
   top: 0;
+}
+
+.side-text {
+  position: fixed;
+  width: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  color: white;
+  right: 5px;
+  top: 0;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  transform: rotate(90deg);
+  transform-origin: center;
+  white-space: nowrap;
 }
 
 .scroll-container .scroll {
@@ -194,7 +207,7 @@ h1 {
 
 #nav a {
   color: white;
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin: 0;
   text-decoration: none;
   font-family: neue-haas-grotesk-display, sans-serif;
@@ -229,8 +242,8 @@ nav a:visited {
   content: "";
   position: absolute;
   width: 0;
-  height: 3px;
-  margin-top: -10px;
+  height: 2px;
+  margin-top: -7px;
   display: block;
   right: 0;
   background: #fff;
@@ -275,14 +288,20 @@ header {
   position: fixed;
   right: 20px;
   -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+}
+
+.burger-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 70px;
+  background-color: black;
+  z-index: 1000;
 }
 #burger-icon span {
   display: block;
@@ -361,24 +380,27 @@ header {
   flex-basis: 100px;
 }
 
-#film p {
+.text p {
   color: white;
   font-family: neue-haas-grotesk-display, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  line-height: 25px;
+  margin-top: 0;
 }
 
-#film h1 {
+.text h1 {
   color: white;
   font-family: neue-haas-grotesk-display, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 4rem;
+  font-size: 2.8rem;
+  margin-bottom: 13px;
 }
 
-#film .text {
-  max-width: 1400px;
+.text {
+  max-width: 800px;
   margin: auto;
   margin-bottom: 60px;
 }
@@ -387,7 +409,32 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   margin: 0 auto;
-  grid-gap: 20px;
+  grid-gap: 0px;
+}
+
+.text .work-category {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 5px 30px 5px 30px;
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.gse-images {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+#work-content {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /*-------------------------- ABOUT -----------------------------*/
@@ -416,15 +463,11 @@ header {
 footer {
   text-align: center;
   font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
   color: white;
   font-size: 0.9rem;
-  font-weight: 100;
-  position: absolute;
-  bottom: 10px;
-  left: 30px;
 }
 
 /*-----------------------  ANIMATIONER -------------------*/
@@ -500,6 +543,10 @@ footer {
   .work-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
+
+  .gse-images {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -567,6 +614,10 @@ footer {
       left: 30px;
     }
 
+    .spacer {
+      height: 150px;
+    }
+
     /*------------ nav --------------------*/
 
     #burger-icon {
@@ -581,6 +632,7 @@ footer {
       padding: 0;
       background-color: transparent;
       height: auto;
+      transition: none;
     }
 
     #nav li,
@@ -600,6 +652,15 @@ footer {
     #contact p {
       font-size: 5rem;
     }
+
+    .text p {
+      font-size: 1.2rem;
+      line-height: 30px;
+    }
+
+    .text h1 {
+      font-size: 4rem;
+    }
   }
 
   @media only screen and (min-width: 1600px) {
@@ -612,6 +673,21 @@ footer {
       grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     }
 
+    .gse-images {
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
+
+    .text {
+      max-width: 1200px;
+    }
+
+    #work-content {
+      max-width: 1450px;
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and (min-width: 2000px) {
     #nav a {
       font-size: 3rem;
       line-height: 58px;
