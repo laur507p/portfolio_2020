@@ -64,7 +64,7 @@ h1 {
 .section-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
 }
 
 .hide-mobile {
@@ -100,9 +100,9 @@ h1 {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow: visible;
   pointer-events: none;
-  left: 48vw;
+  right: 30px;
   top: 0;
 }
 
@@ -110,6 +110,7 @@ h1 {
   width: 100%;
   display: flex;
   transform: rotate(90deg);
+  transform-origin: right;
 }
 
 .scroll-container .scroll div {
@@ -117,7 +118,7 @@ h1 {
   font-family: neue-haas-grotesk-display, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 4rem;
+  font-size: 2rem;
   white-space: nowrap;
   animation: animate 40s linear infinite;
   animation-delay: -40s;
@@ -193,7 +194,7 @@ h1 {
   margin: 0;
   text-decoration: none;
   font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   line-height: 80px;
 }
@@ -224,13 +225,13 @@ nav a:visited {
   content: "";
   position: absolute;
   width: 0;
-  height: 4px;
+  height: 3px;
   margin-top: -10px;
   display: block;
   right: 0;
   background: #fff;
-  transition: width 0.2s ease;
-  -webkit-transition: width 0.2s ease;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
 }
 
 .link:hover::after {
@@ -241,7 +242,7 @@ nav a:visited {
 
 .header-title {
   font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   color: white;
   text-decoration: none;
@@ -376,6 +377,13 @@ header {
   margin-bottom: 60px;
 }
 
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin: 0 auto;
+  grid-gap: 20px;
+}
+
 /*-------------------------- ABOUT -----------------------------*/
 
 /*-------------------------- CONTACT -----------------------------*/
@@ -385,16 +393,22 @@ header {
   font-weight: 400;
   font-style: normal;
   color: white;
-  font-size: 5rem;
+  font-size: 2rem;
   text-align: left;
   text-decoration: underline;
-  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-section-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 /*--------------------- FOOTER------------------------*/
 
 footer {
-  text-align: left;
+  text-align: center;
   font-family: neue-haas-grotesk-display, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -428,14 +442,24 @@ footer {
 
 .float {
   animation-name: float_kf;
-  animation-duration: 8s;
+  animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   transform-box: fill-box;
-  transform: translate(99px, 1240px);
+  transition: 1s;
 }
 
-@keyframes float_kf {
+.float2 {
+  animation-name: float_kf;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  animation-delay: 1s;
+  transition: 1s;
+}
+
+/* @keyframes float_kf {
   0% {
     transform: translate(18px, 17px);
   }
@@ -451,8 +475,19 @@ footer {
   100% {
     transform: translate(18px, 17px);
   }
-}
+} */
 
+@keyframes float_kf {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 /*------------------------ MEDIA QUERY ----------------------------*/
 @media only screen and (min-width: 300px) {
   /*------------ Muna að gera grid fyrir 300px síma -----------------------*/
@@ -486,9 +521,48 @@ footer {
   }
 
   @media only screen and (min-width: 1000px) {
+    /*------------ general stuff --------------------*/
+
+    .hide-burger {
+      display: block;
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .hide-mobile {
+      display: block;
+    }
+    .hide-desktop {
+      display: none;
+    }
+
+    .grey:hover {
+      filter: grayscale(0);
+      transition: 0.5s;
+    }
+
+    .grey {
+      transition: 0.5s;
+      filter: grayscale(1);
+    }
+
+    header {
+      padding: 0px;
+    }
+
     #side-text {
       display: block;
     }
+
+    .work-grid {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    footer {
+      left: 30px;
+    }
+
+    /*------------ nav --------------------*/
 
     #burger-icon {
       display: none;
@@ -516,22 +590,10 @@ footer {
       line-height: 58px;
       font-weight: 400;
     }
+    /*------------ other--------------------*/
 
-    .hide-burger {
-      display: block;
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .hide-mobile {
-      display: block;
-    }
-    .hide-desktop {
-      display: none;
-    }
-
-    header {
-      padding: 0px;
+    #contact p {
+      font-size: 5rem;
     }
   }
 
@@ -539,6 +601,10 @@ footer {
     /*------------ Breyta max width fyrir stóra skjái -----------------------*/
     .section-wrapper {
       max-width: 1600px;
+    }
+
+    .work-grid {
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     }
   }
 }
