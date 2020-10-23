@@ -62,7 +62,7 @@ h1 {
 }
 
 .section-wrapper {
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 40px;
 }
@@ -73,6 +73,10 @@ h1 {
 
 .hide-desktop {
   display: block;
+}
+
+.spacer {
+  height: 120px;
 }
 
 /*--------------------- FORSIDE ------------------------*/
@@ -258,6 +262,8 @@ nav a:visited {
 
 header {
   padding: 20px;
+  position: fixed;
+  z-index: 100;
 }
 
 /*----------- burger menu animation ----*/
@@ -266,8 +272,8 @@ header {
   width: 30px;
   z-index: 1001;
   height: 20px;
-  position: relative;
-  float: right;
+  position: fixed;
+  right: 20px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -379,7 +385,7 @@ header {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   margin: 0 auto;
   grid-gap: 20px;
 }
@@ -489,8 +495,11 @@ footer {
   }
 }
 /*------------------------ MEDIA QUERY ----------------------------*/
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 400px) {
   /*------------ Muna að gera grid fyrir 300px síma -----------------------*/
+  .work-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -554,10 +563,6 @@ footer {
       display: block;
     }
 
-    .work-grid {
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    }
-
     footer {
       left: 30px;
     }
@@ -586,8 +591,8 @@ footer {
     }
 
     #nav a {
-      font-size: 3rem;
-      line-height: 58px;
+      font-size: 2rem;
+      line-height: 42px;
       font-weight: 400;
     }
     /*------------ other--------------------*/
@@ -605,6 +610,12 @@ footer {
 
     .work-grid {
       grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
+
+    #nav a {
+      font-size: 3rem;
+      line-height: 58px;
+      font-weight: 400;
     }
   }
 }
