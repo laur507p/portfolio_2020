@@ -437,6 +437,10 @@ header {
   padding: 0;
 }
 
+.desktop-imgs {
+  padding: 0;
+}
+
 #work-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -447,7 +451,7 @@ header {
   font-style: normal;
   text-decoration: none;
   color: white;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 .work-text-header {
@@ -457,14 +461,17 @@ header {
 }
 
 .work-text-cat {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
-  border: 1px solid white;
-  border-radius: 50px;
-  padding: 5px 20px 5px 20px;
+  font-family: neue-haas-grotesk-display, sans-serif;
+
+  /* border: 1px solid white;
+  border-radius: 50px; */
+  /* padding: 5px 20px 5px 20px; */
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
+  text-transform: capitalize;
   margin-top: 5px;
   margin-bottom: 0;
 }
@@ -502,13 +509,48 @@ header {
 /*--------------------- FOOTER------------------------*/
 
 footer {
-  text-align: center;
   font-family: neue-haas-grotesk-display, sans-serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer p {
+  padding: 0;
+  margin: 0;
+}
+
+footer .col {
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .left {
+  text-align: left;
+}
+
+footer .middle {
+  text-align: center;
+}
+
+footer .right {
+  text-align: right;
 }
 
 /*-----------------------  ANIMATIONER -------------------*/
@@ -697,6 +739,7 @@ footer {
     .text p {
       font-size: 1.2rem;
       line-height: 30px;
+      letter-spacing: 0.1px;
     }
 
     .text h1 {
@@ -710,6 +753,10 @@ footer {
 
     .gse-desktop-imgs {
       padding: 10px 78px;
+    }
+
+    .desktop-imgs {
+      padding: 10px 55px;
     }
   }
 
@@ -738,6 +785,10 @@ footer {
 
     .gse-desktop-imgs {
       padding: 10px 98px;
+    }
+
+    .desktop-imgs {
+      padding: 10px 85px;
     }
   }
 
