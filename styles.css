@@ -40,6 +40,7 @@ body {
 
 .back-button {
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .button:hover {
@@ -222,6 +223,9 @@ a:visited {
 nav a:visited {
   color: white;
 }
+#nav .active {
+  text-decoration: underline;
+}
 
 .hide-burger {
   transition: 0.4s;
@@ -397,7 +401,8 @@ header {
 .text {
   max-width: 800px;
   margin: auto;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 
 .work-grid {
@@ -412,11 +417,12 @@ header {
   border: 1px solid white;
   border-radius: 50px;
   padding: 5px 30px 5px 30px;
-  font-family: helvetica;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: 300;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin-right: 5px;
   display: inline-block;
 }
@@ -427,11 +433,51 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
+.gse-desktop-imgs {
+  padding: 0;
+}
+
 #work-content {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+.work-text p {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+}
+
+.work-text-header {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.work-text-cat {
+  font-size: 0.8rem;
+  font-weight: 400;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 5px 20px 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.work-text {
+  margin-bottom: 40px;
+  margin-top: -15px;
+  padding-left: 23px;
+}
+
+.work-grid a {
+  text-decoration: none;
+}
 /*-------------------------- ABOUT -----------------------------*/
 
 /*-------------------------- CONTACT -----------------------------*/
@@ -656,6 +702,15 @@ footer {
     .text h1 {
       font-size: 4rem;
     }
+
+    .text {
+      max-width: 910px;
+      padding: 0;
+    }
+
+    .gse-desktop-imgs {
+      padding: 10px 78px;
+    }
   }
 
   @media only screen and (min-width: 1600px) {
@@ -680,6 +735,10 @@ footer {
       max-width: 1450px;
       margin: 0 auto;
     }
+
+    .gse-desktop-imgs {
+      padding: 10px 98px;
+    }
   }
 
   @media only screen and (min-width: 2000px) {
@@ -691,6 +750,10 @@ footer {
 
     #nav {
       margin: 5px 17px;
+    }
+
+    .link::after {
+      height: 3px;
     }
   }
 }
