@@ -73,7 +73,11 @@
     </header>
 
     <div id="coverphoto">
-      <img src="myndir/fosidumynd_tape-minnkud.png" alt="analogbillede" />
+      <img
+        class="coverphotoimg"
+        src="myndir/fosidumynd_tape-minnkud.png"
+        alt="analogbillede"
+      />
     </div>
 
     <div id="coverphoto2">
@@ -83,20 +87,6 @@
     <div id="coverphoto3">
       <img src="myndir/analog2-minnkud.png" alt="analogbillede" />
     </div>
-
-    <!-- <section class="text-test">
-      <h1
-        class="ztext-test"
-        data-z
-        data-z-layers="5"
-        data-z-depth="0.1em"
-        data-z-event="pointer"
-        data-z-eventRotation="5deg"
-      >
-        Laura Ragnarsdóttir <br />
-        Front-end developer & designer
-      </h1>
-    </section> -->
 
     <section id="side-text" class="scroll-container hide-mobile">
       <div class="scroll text">
@@ -117,5 +107,17 @@
 
     <script src="script.js"></script>
     <script src="resources/ztext.min.js"></script>
+    <script>
+      "use strict";
+      // const container = document.querySelector("#coverphoto");
+      // const card = document.querySelector(".coverphotoimg");
+
+      // container.addEventListener("mousemove", (e) => {
+      //   let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+      //   let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+      //   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+      // });
+
+    </script>
   </body>
 </html>

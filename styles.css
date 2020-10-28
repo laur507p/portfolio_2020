@@ -186,6 +186,12 @@ a:visited {
   left: 25vw;
 }
 
+/* .coverphotoimg {
+  transform-style: preserve-3d;
+  perspective: 200px;
+  box-shadow: 0 20px 20px rgba(250, 250, 250, 0.2);
+} */
+
 /*----------------- NAV og HEADER ------------------------------*/
 
 #nav {
@@ -413,10 +419,26 @@ header {
 }
 
 .text .work-category {
+  color: black;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.text .work-link {
   color: white;
   border: 1px solid white;
   border-radius: 50px;
-  padding: 5px 30px 5px 30px;
+  padding: 10px 30px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1rem;
@@ -425,6 +447,14 @@ header {
   font-style: normal;
   margin-right: 5px;
   display: inline-block;
+  transition: 0.3s;
+}
+
+.text .work-link:hover {
+  color: black;
+  background-color: white;
+  transition: 0.3s;
+  border: 1px solid white;
 }
 
 .gse-images {
@@ -464,7 +494,6 @@ header {
   font-size: 1rem;
   font-weight: 400;
   font-family: neue-haas-grotesk-display, sans-serif;
-
   /* border: 1px solid white;
   border-radius: 50px; */
   /* padding: 5px 20px 5px 20px; */
