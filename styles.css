@@ -432,13 +432,14 @@ header {
   font-style: normal;
   margin-right: 5px;
   display: inline-block;
+  margin-bottom: 0;
 }
 
 .text .work-link {
   color: white;
   border: 1px solid white;
   border-radius: 50px;
-  padding: 10px 30px;
+  padding: 7.5px 30px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1rem;
@@ -446,6 +447,7 @@ header {
   font-weight: 400;
   font-style: normal;
   margin-right: 5px;
+  margin-top: 10px;
   display: inline-block;
   transition: 0.3s;
 }
@@ -490,7 +492,7 @@ header {
   margin: 0;
 }
 
-.work-text-cat {
+.work-text .work-text-cat {
   font-size: 1rem;
   font-weight: 400;
   font-family: neue-haas-grotesk-display, sans-serif;
@@ -501,7 +503,8 @@ header {
   text-transform: uppercase;
   display: inline-block;
   text-transform: capitalize;
-  margin-top: 5px;
+  margin-top: 1px;
+  color: grey;
   margin-bottom: 0;
 }
 
@@ -546,7 +549,6 @@ footer {
   font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   text-transform: uppercase;
   padding: 20px;
   margin-bottom: 0;
@@ -555,22 +557,26 @@ footer {
 footer a {
   color: white;
   text-decoration: none;
+  margin: 0 20px;
+  flex-basis: 100%;
+  margin: 0 20px 0 0;
 }
 footer p {
   padding: 0;
-  margin: 0;
+  flex-basis: 100%;
+  margin: 0 20px 0 0;
 }
 
-footer .col {
+/* footer .col {
   flex-grow: 1;
   flex-basis: auto;
-}
+} */
 
 footer a:hover {
   text-decoration: underline;
 }
 
-footer .left {
+/* footer .left {
   text-align: left;
 }
 
@@ -580,7 +586,7 @@ footer .middle {
 
 footer .right {
   text-align: right;
-}
+} */
 
 /*-----------------------  ANIMATIONER -------------------*/
 
@@ -722,10 +728,6 @@ footer .right {
       display: block;
     }
 
-    footer {
-      left: 30px;
-    }
-
     .spacer {
       height: 150px;
     }
@@ -787,6 +789,23 @@ footer .right {
     .desktop-imgs {
       padding: 10px 55px;
     }
+
+    .text .work-link {
+      padding: 10px 30px;
+      margin-top: 0px;
+    }
+
+    footer {
+      flex-wrap: nowrap;
+      margin-left: 5px;
+    }
+    /* 
+    footer a {
+      flex-basis: auto;
+    }
+    footer p {
+      flex-basis: auto;
+    } */
   }
 
   @media only screen and (min-width: 1600px) {
