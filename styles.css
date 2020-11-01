@@ -796,16 +796,13 @@ footer .right {
     }
 
     footer {
-      flex-wrap: nowrap;
+      display: inline-block;
       margin-left: 5px;
     }
-    /* 
-    footer a {
-      flex-basis: auto;
-    }
+
     footer p {
-      flex-basis: auto;
-    } */
+      display: inline-block;
+    }
   }
 
   @media only screen and (min-width: 1600px) {

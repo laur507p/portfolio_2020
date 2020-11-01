@@ -91,11 +91,32 @@
         <p class="work-category">2019</p>
         <p class="work-category">Design</p>
         <p class="work-category">Coding</p>
+        <a
+          href="https://lauraragnars.dk/portfolio/opia/forside.html"
+          target="_blank"
+          rel="noopener"
+          class="work-link"
+          >Visit site</a
+        >
       </div>
 
       <section id="work-content">
-        <div class="desktop-imgs">
-          <!-- insert imgs here -->
+        <div class="gse-desktop-imgs">
+          <img
+            class="slide"
+            src="images/opia/opia1.png"
+            alt="Opia wines photo"
+          />
+          <img
+            class="slide"
+            src="images/opia/opia2.png"
+            alt="Opia wines photo"
+          />
+          <img
+            class="slide"
+            src="images/opia/opia3.png"
+            alt="Opia wines photo"
+          />
         </div>
       </section>
     </section>
@@ -105,10 +126,48 @@
     </div>
 
     <footer>
-      <p>2020 &copy; LAURA RAGNARSDÓTTIR</p>
+      <p>2020 &copy; Laura Toft Ragnarsdóttir</p>
+
+      <a href="mailto:ragnarslaura@gmail.com">EMAIL ME</a>
+
+      <a
+        href="https://www.instagram.com/lauraragnars/"
+        target="_blank"
+        rel="noopener"
+        >instagram</a
+      >
+
+      <a
+        href="https://www.linkedin.com/in/laura-toft-ragnarsdóttir-9aa3211b8/"
+        target="_blank"
+        rel="noopener"
+        >LINKEDIN</a
+      >
     </footer>
 
     <script src="script.js"></script>
     <script src="resources/ztext.min.js"></script>
+    <script>
+      "use strict";
+
+      let slideIndex = 0;
+      let i;
+      const images = document.querySelectorAll(".slide");
+      carousel();
+
+      function carousel() {
+        if (slideIndex > images.length - 1) {
+          slideIndex = 0;
+        }
+        images.forEach((img) => {
+          img.style.display = "none";
+        });
+
+        images[slideIndex].style.display = "block";
+        slideIndex++;
+
+        setTimeout(carousel, 2000);
+      }
+    </script>
   </body>
 </html>
