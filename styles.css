@@ -19,6 +19,8 @@ video {
 body {
   margin: 0;
   background-color: black;
+  position: relative;
+  min-height: 100vh;
 }
 
 .button {
@@ -82,6 +84,14 @@ a:visited {
 
 .spacer {
   height: 80px;
+}
+
+.work-spacer {
+  height: 150px;
+}
+
+.about-spacer {
+  height: 200px;
 }
 
 /*--------------------- FORSIDE ------------------------*/
@@ -166,7 +176,7 @@ a:visited {
   width: 30vw;
   margin: auto;
   position: absolute;
-  top: 55vh;
+  top: 48vh;
   left: 55vw;
 }
 
@@ -182,7 +192,7 @@ a:visited {
   width: 45vw;
   margin: auto;
   position: absolute;
-  top: 30vh;
+  top: 18vh;
   left: 25vw;
 }
 
@@ -247,7 +257,7 @@ nav a:visited {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   margin-top: -7px;
   display: block;
   right: 0;
@@ -444,7 +454,7 @@ header {
   text-transform: uppercase;
   font-size: 1rem;
   font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   margin-right: 5px;
   margin-top: 10px;
@@ -487,7 +497,7 @@ header {
 }
 
 .work-text-header {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
   margin: 0;
 }
@@ -518,17 +528,64 @@ header {
   text-decoration: none;
 }
 /*-------------------------- ABOUT -----------------------------*/
+#about p {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+#about h2 {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 5rem;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+.about-link {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-right: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.about-link:hover {
+  color: black;
+  background-color: white;
+  transition: 0.3s;
+  border: 1px solid white;
+}
+
+.portrait-picture {
+  max-width: 800px;
+  margin: 20px 0 0 auto;
+}
 
 /*-------------------------- CONTACT -----------------------------*/
 
 #contact p {
   font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   color: white;
-  font-size: 2rem;
+  font-size: 4rem;
   text-align: left;
-  text-decoration: underline;
   margin-bottom: 0;
 }
 
@@ -545,21 +602,24 @@ footer {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
-  color: white;
+  color: grey;
   font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
   text-transform: uppercase;
   padding: 20px;
   margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
 }
 
 footer a {
-  color: white;
+  color: grey;
   text-decoration: none;
   margin: 0 20px;
   flex-basis: 100%;
   margin: 0 20px 0 0;
+  transition: 0.3s;
 }
 footer p {
   padding: 0;
@@ -567,26 +627,11 @@ footer p {
   margin: 0 20px 0 0;
 }
 
-/* footer .col {
-  flex-grow: 1;
-  flex-basis: auto;
-} */
-
 footer a:hover {
-  text-decoration: underline;
+  /* border-bottom: 1px solid white; */
+  color: white;
+  transition: 0.3s;
 }
-
-/* footer .left {
-  text-align: left;
-}
-
-footer .middle {
-  text-align: center;
-}
-
-footer .right {
-  text-align: right;
-} */
 
 /*-----------------------  ANIMATIONER -------------------*/
 
@@ -667,7 +712,7 @@ footer .right {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   /*--------------------- FORSIDE ------------------------*/
 
   #coverphoto {
@@ -728,10 +773,6 @@ footer .right {
       display: block;
     }
 
-    .spacer {
-      height: 150px;
-    }
-
     /*------------ nav --------------------*/
 
     #burger-icon {
@@ -763,9 +804,9 @@ footer .right {
     }
     /*------------ other--------------------*/
 
-    #contact p {
+    /* #contact p {
       font-size: 5rem;
-    }
+    } */
 
     .text p {
       font-size: 1.2rem;
@@ -802,6 +843,24 @@ footer .right {
 
     footer p {
       display: inline-block;
+    }
+    .underline-about {
+      text-decoration: underline;
+    }
+    .laura:hover {
+      cursor: url(images/laura_cursor.png), auto;
+    }
+
+    .code:hover {
+      cursor: url(images/code-cursor.png), auto;
+    }
+
+    .ikea:hover {
+      cursor: url(images/ikea_cursor.png), auto;
+    }
+
+    .apple:hover {
+      cursor: url(images/apple_cursor.png), auto;
     }
   }
 
@@ -844,12 +903,12 @@ footer .right {
       font-weight: 400;
     }
 
-    #nav {
-      margin: 5px 17px;
+    .spacer {
+      height: 150px;
     }
 
-    .link::after {
-      height: 3px;
+    #nav {
+      margin: 5px 17px;
     }
   }
 }
