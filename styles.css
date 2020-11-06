@@ -74,6 +74,12 @@ a:visited {
   padding: 30px;
 }
 
+.about-section-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
 .hide-mobile {
   display: none;
 }
@@ -538,16 +544,6 @@ header {
   padding: 0;
 }
 
-#about h2 {
-  font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: white;
-  font-size: 5rem;
-  margin: 0 0 15px 0;
-  padding: 0;
-}
-
 .about-link {
   color: white;
   border: 1px solid white;
@@ -581,12 +577,28 @@ header {
 
 #contact p {
   font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   color: white;
   font-size: 4rem;
   text-align: left;
+  margin: 0;
+}
+
+#contact a {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 2.5rem;
+  text-align: left;
   margin-bottom: 0;
+  display: block;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
 
 .contact-section-wrapper {
@@ -620,6 +632,10 @@ footer a {
   flex-basis: 100%;
   margin: 0 20px 0 0;
   transition: 0.3s;
+}
+
+footer a:visited {
+  color: grey;
 }
 footer p {
   padding: 0;
@@ -738,177 +754,179 @@ footer a:hover {
     top: 10vh;
     left: 42vw;
   }
+}
+@media only screen and (min-width: 1000px) {
+  /*------------ general stuff --------------------*/
 
-  @media only screen and (min-width: 1000px) {
-    /*------------ general stuff --------------------*/
+  .hide-burger {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
 
-    .hide-burger {
-      display: block;
-      opacity: 1;
-      pointer-events: all;
-    }
+  .hide-mobile {
+    display: block;
+  }
+  .hide-desktop {
+    display: none;
+  }
 
-    .hide-mobile {
-      display: block;
-    }
-    .hide-desktop {
-      display: none;
-    }
+  .grey:hover {
+    filter: grayscale(0);
+    transition: 0.5s;
+  }
 
-    .grey:hover {
-      filter: grayscale(0);
-      transition: 0.5s;
-    }
+  .grey {
+    transition: 0.5s;
+    filter: grayscale(1);
+  }
 
-    .grey {
-      transition: 0.5s;
-      filter: grayscale(1);
-    }
+  header {
+    padding: 0px;
+  }
 
-    header {
-      padding: 0px;
-    }
+  #side-text {
+    display: block;
+  }
+  #contact a {
+    font-size: 4rem;
+  }
 
-    #side-text {
-      display: block;
-    }
+  /*------------ nav --------------------*/
 
-    /*------------ nav --------------------*/
+  #burger-icon {
+    display: none;
+  }
 
-    #burger-icon {
-      display: none;
-    }
+  #nav {
+    text-align: left;
+    margin: 0px 10px;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    background-color: transparent;
+    height: auto;
+    transition: none;
+  }
 
-    #nav {
-      text-align: left;
-      margin: 0px 10px;
-      position: relative;
-      z-index: 1;
-      padding: 0;
-      background-color: transparent;
-      height: auto;
-      transition: none;
-    }
+  #nav li,
+  #nav ul {
+    text-align: left;
+    padding: 0;
+    margin-bottom: -10px;
+  }
 
-    #nav li,
-    #nav ul {
-      text-align: left;
-      padding: 0;
-      margin-bottom: -10px;
-    }
+  #nav a {
+    font-size: 2rem;
+    line-height: 42px;
+    font-weight: 400;
+  }
+  /*------------ other--------------------*/
 
-    #nav a {
-      font-size: 2rem;
-      line-height: 42px;
-      font-weight: 400;
-    }
-    /*------------ other--------------------*/
-
-    /* #contact p {
+  /* #contact p {
       font-size: 5rem;
     } */
 
-    .text p {
-      font-size: 1.2rem;
-      line-height: 30px;
-      letter-spacing: 0.1px;
-    }
-
-    .text h1 {
-      font-size: 4rem;
-    }
-
-    .text {
-      max-width: 910px;
-      padding: 0;
-    }
-
-    .gse-desktop-imgs {
-      padding: 10px 78px;
-    }
-
-    .desktop-imgs {
-      padding: 10px 55px;
-    }
-
-    .text .work-link {
-      padding: 10px 30px;
-      margin-top: 0px;
-    }
-
-    footer {
-      display: inline-block;
-      margin-left: 5px;
-    }
-
-    footer p {
-      display: inline-block;
-    }
-    .underline-about {
-      text-decoration: underline;
-    }
-    .laura:hover {
-      cursor: url(images/laura_cursor.png), auto;
-    }
-
-    .code:hover {
-      cursor: url(images/code-cursor.png), auto;
-    }
-
-    .ikea:hover {
-      cursor: url(images/ikea_cursor.png), auto;
-    }
-
-    .apple:hover {
-      cursor: url(images/apple_cursor.png), auto;
-    }
+  .text p {
+    font-size: 1.2rem;
+    line-height: 30px;
+    letter-spacing: 0.1px;
   }
 
-  @media only screen and (min-width: 1600px) {
-    /*------------ Breyta max width fyrir stóra skjái -----------------------*/
-    .section-wrapper {
-      max-width: 1600px;
-    }
-
-    .work-grid {
-      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    }
-
-    .gse-images {
-      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    }
-
-    .text {
-      max-width: 1200px;
-    }
-
-    #work-content {
-      max-width: 1450px;
-      margin: 0 auto;
-    }
-
-    .gse-desktop-imgs {
-      padding: 10px 98px;
-    }
-
-    .desktop-imgs {
-      padding: 10px 85px;
-    }
+  .text h1 {
+    font-size: 4rem;
   }
 
-  @media only screen and (min-width: 2000px) {
-    #nav a {
-      font-size: 3rem;
-      line-height: 58px;
-      font-weight: 400;
-    }
+  .text {
+    max-width: 910px;
+    padding: 0;
+  }
 
-    .spacer {
-      height: 150px;
-    }
+  .gse-desktop-imgs {
+    padding: 10px 78px;
+  }
 
-    #nav {
-      margin: 5px 17px;
-    }
+  .desktop-imgs {
+    padding: 10px 55px;
+  }
+
+  .text .work-link {
+    padding: 10px 30px;
+    margin-top: 0px;
+  }
+
+  footer {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  footer p {
+    display: inline-block;
+  }
+  .underline-about {
+    text-decoration: underline;
+  }
+  .laura:hover {
+    cursor: url(images/laura_cursor.png), auto;
+  }
+
+  .code:hover {
+    cursor: url(images/code-cursor.png), auto;
+  }
+
+  .ikea:hover {
+    cursor: url(images/ikea_cursor.png), auto;
+  }
+
+  .apple:hover {
+    cursor: url(images/apple_cursor.png), auto;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  /*------------ Breyta max width fyrir stóra skjái -----------------------*/
+  .section-wrapper {
+    max-width: 1600px;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+
+  .gse-images {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+
+  .text {
+    max-width: 1200px;
+  }
+
+  #work-content {
+    max-width: 1450px;
+    margin: 0 auto;
+  }
+
+  .gse-desktop-imgs {
+    padding: 10px 98px;
+  }
+
+  .desktop-imgs {
+    padding: 10px 85px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  #nav a {
+    font-size: 3rem;
+    line-height: 58px;
+    font-weight: 400;
+  }
+
+  .spacer {
+    height: 150px;
+  }
+
+  #nav {
+    margin: 5px 17px;
   }
 }
